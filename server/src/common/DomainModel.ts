@@ -1,3 +1,0 @@
-interface DomainModel {}
-
-export { DomainModel };
