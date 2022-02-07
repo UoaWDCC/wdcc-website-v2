@@ -1,4 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap');
+
 body {
-  color: inherit;
-  font-family: sans-serif;
+  color: #444;
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  line-height: 1.5rem;
+}
+
+h1 {
+  font-family: Montserrat, sans-serif;
 }
