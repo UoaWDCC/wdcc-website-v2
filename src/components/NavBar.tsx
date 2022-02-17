@@ -4,10 +4,10 @@ import logo from '../resources/logos/primary_white_512.png';
 import { useLocation } from 'react-router-dom';
 
 interface NavItem {
-  displayName: string,
-  link: string,
-  isActive?: boolean,
-  highlight?: boolean
+  displayName: string;
+  link: string;
+  isActive?: boolean;
+  highlight?: boolean;
 }
 
 const Container = styled.div`
@@ -15,7 +15,7 @@ const Container = styled.div`
     height: 160px;
     background-color: rgb(29, 96, 157);
   }
-  
+
   ul {
     position: absolute;
     top: 65px;
@@ -40,7 +40,7 @@ const Container = styled.div`
         display: block;
 
         &.active {
-          color: #FFD166;
+          color: #ffd166;
         }
 
         &.highlight {
@@ -52,7 +52,7 @@ const Container = styled.div`
         position: absolute;
         bottom: 0;
 
-        content: "";
+        content: '';
         background-color: white;
         height: 2px;
         width: 0;
@@ -80,9 +80,7 @@ const Logo = styled.img`
   height: auto;
 `;
 
-
 function NavBar({ hasBg }: { hasBg?: boolean }) {
-
   const location = useLocation();
 
   const listItems: NavItem[] = [
@@ -99,17 +97,23 @@ function NavBar({ hasBg }: { hasBg?: boolean }) {
       link: '/about',
     },
     {
-      displayName: "Join for 2022",
-      link: "https://join.wdcc.co.nz",
+      displayName: 'FAQ',
+      link: '/faq',
+    },
+    {
+      displayName: 'Join for 2022',
+      link: 'https://join.wdcc.co.nz',
       highlight: true,
-    }
+    },
   ].map((listItem) => {
-
-    const isActive = listItem.link === '/' ? location.pathname.endsWith('/') : location.pathname.includes(listItem.link);
+    const isActive =
+      listItem.link === '/'
+        ? location.pathname.endsWith('/')
+        : location.pathname.includes(listItem.link);
     return {
       isActive,
-      ...listItem
-    }
+      ...listItem,
+    };
   });
 
   return (
@@ -117,14 +121,22 @@ function NavBar({ hasBg }: { hasBg?: boolean }) {
       <ul>
         {listItems.map((item) => (
           <li>
-            <a href={item.link} className={(item.isActive ? 'active' : '') + (item.highlight ? ' highlight' : '')}>
+            <a
+              href={item.link}
+              className={
+                (item.isActive ? 'active' : '') +
+                (item.highlight ? ' highlight' : '')
+              }
+            >
               {item.displayName}
             </a>
           </li>
         ))}
       </ul>
 
-      <a href={'/'}><Logo src={logo} alt={'Logo'} /></a>
+      <a href={'/'}>
+        <Logo src={logo} alt={'Logo'} />
+      </a>
     </Container>
   );
 }
