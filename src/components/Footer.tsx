@@ -4,10 +4,28 @@ import styled from 'styled-components';
 
 import discordJoinBtn from '../resources/discord-min.png';
 
+const BannerBottom = styled.div`
+  background-color: #183249;
+
+  margin: 0;
+
+  padding: 20px;
+
+  p {
+    color: rgba(255, 255, 255, 0.72);
+    margin: 0;
+    text-align: center;
+  }
+`
+
 const Container = styled(Screen)`
   min-height: 0;
   text-align: center;
-  background-color: rgb(40, 100, 155);
+
+  --light-blue: rgb(51, 121, 185);
+  --dark-blue: rgb(29, 96, 157);
+  background: linear-gradient(180deg, var(--light-blue), var(--dark-blue));
+
   color: white;
 
   img {
@@ -24,32 +42,30 @@ const Container = styled(Screen)`
       margin: 0 15px;
     }
   }
-  
+
   a {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
   }
-  
+
   .discord-container {
-    
-    
+
+    box-sizing: border-box;
     width: 350px;
     margin: 30px auto;
-    
-    
-    
+
     h4 {
       margin: 0 0 20px 0;
     }
-    
+
     img {
       border: 2px solid white;
       border-radius: 20px;
       padding: 15px;
-      
+
       cursor: pointer;
-      
+
       transition-duration: 0.3s;
 
       &:hover {
@@ -62,23 +78,38 @@ const Container = styled(Screen)`
 
 function Footer() {
   return (
-    <Container>
-      <p>Copyright &copy; {new Date().getFullYear()} Web Development & Consulting Club Incorporated. All rights reserved.</p>
+    <>
+      <Container>
+        <div className={'discord-container'}>
 
-      <div className={'discord-container'}>
+          <h4>Join the UoA Tech Clubs community!</h4>
+          <a href={'https://discord.gg/p6HkTZ4x'} target={'_blank'}><img src={discordJoinBtn}
+                                                                         alt={'Join on discord button'} /></a>
+        </div>
 
-        <h4>Join the UoA Tech Clubs community!</h4>
-        <a href={'https://discord.gg/p6HkTZ4x'} target={'_blank'}><img src={discordJoinBtn} alt={"Join on discord button"} /></a>
-      </div>
+        <ul>
+          <li><a href={'https://www.linkedin.com/uoa-wdcc'} target={'_blank'} rel='noreferrer'><i
+            className='fab fa-linkedin' /></a></li>
+          <li><a href={'https://www.facebook.com/uoa.wdcc'} target={'_blank'} rel='noreferrer'><i
+            className='fab fa-facebook-square' /></a></li>
+          <li><a href={'https://www.instagram.com/uoa_wdcc/'} target={'_blank'} rel='noreferrer'><i
+            className='fab fa-instagram-square' /></a></li>
+          <li><a href={'mailto:contact@wdcc.co.nz'} target={'_blank'} rel='noreferrer'><i className='fas fa-envelope' /></a>
+          </li>
+          <li><a href={'https://github.com/UoaWDCC'} target={'_blank'} rel='noreferrer'><i
+            className='fab fa-github-square' /></a></li>
+        </ul>
 
-      <ul>
-        <li><a href={'https://www.linkedin.com/uoa-wdcc'} target={'_blank'} rel="noreferrer"><i className="fab fa-linkedin" /></a></li>
-        <li><a href={'https://www.facebook.com/uoa.wdcc'} target={'_blank'} rel="noreferrer"><i className="fab fa-facebook-square" /></a></li>
-        <li><a href={'https://www.instagram.com/uoa_wdcc/'} target={'_blank'} rel="noreferrer"><i className="fab fa-instagram-square" /></a></li>
-        <li><a href={'mailto:contact@wdcc.co.nz'} target={'_blank'} rel="noreferrer"><i className="fas fa-envelope" /></a></li>
-        <li><a href={'https://github.com/UoaWDCC'} target={'_blank'} rel="noreferrer"><i className="fab fa-github-square" /></a></li>
-      </ul>
-    </Container>
+
+
+      </Container>
+
+      <BannerBottom className={'banner-bottom'}>
+        <p>Powered by WDCC using React + TypeScript</p>
+        <p>Copyright &copy; {new Date().getFullYear()} Web Development & Consulting Club Incorporated. All rights reserved.</p>
+      </BannerBottom>
+    </>
+
   );
 }
 

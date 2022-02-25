@@ -140,23 +140,35 @@ const SponsorsScreen = styled(Screen)`
   }
 `;
 
-const JoinScreen = styled(Screen)`
+const JoinScreen = styled.div`
+  display: grid;
+  grid-template-columns: 800px auto;
   background-color: #FFD166;
-  /* Override Screen size to automatically resize based on content */
   min-height: 0;
-
-  div {
-    max-width: 600px;
+  
+  overflow: hidden;
+  
+  @media (max-width: 1000px) {
+    grid-template-rows: 1fr 250px;
+    grid-template-columns: 100vw;
   }
-
+  
+  > div {
+    padding: 50px 75px;
+    
+    @media (max-width: 600px) {
+      padding: 50px 30px;
+    }
+  }
+  
+  justify-content: space-between;
+  
   img {
-    position: absolute;
-    top: 0;
-    right: 0;
+    object-position: left;
+    object-fit: cover;
+    width: 100%;
     height: 100%;
   }
-
-  //margin-bottom: 100px;
 `;
 
 const JoinButton = styled(OutlinedButton)`
@@ -213,7 +225,7 @@ export default function IndexPage() {
             <h2>University of Auckland</h2>
             <h1>Web Development & Consulting Club</h1>
             <p>We promote the learning and practice of software development through workshops and
-              real-world projects, to equip and inspire the tomorrow's talent</p>
+              real-world projects, to equip and inspire tomorrow's talent</p>
           </div>
 
 
@@ -231,14 +243,15 @@ export default function IndexPage() {
       </SponsorsScreen>
 
       <JoinScreen>
-        <h1>Become a member for 2022</h1>
         <div>
-          <p>Get up-to-date reminders of WDCC events and workshops, and some exclusive member networking events
-            throughout the year.</p>
-          <p>You don't need to know web development. <b>Membership is free!</b></p>
+          <h1>Become a member for 2022</h1>
+          <div>
+            <p>Get up-to-date reminders of WDCC events and workshops, and some exclusive member networking events
+              throughout the year.</p>
+            <p>You don't need to know web development. <b>Membership is free!</b></p>
+          </div>
+          <JoinButton href={'https://join.wdcc.co.nz'}>Join WDCC</JoinButton>
         </div>
-
-        <JoinButton href={'https://join.wdcc.co.nz'}>Join WDCC</JoinButton>
 
         <img src={combinedBanner} alt={'Hackathon photos'} />
       </JoinScreen>

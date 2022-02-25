@@ -1,24 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import logo from '../resources/logos/primary_white_512.png';
 import { useLocation } from 'react-router-dom';
 
-interface NavItem {
-  displayName: string;
-  link: string;
-  isActive?: boolean;
-  highlight?: boolean;
-}
+import NavItem from './NavItem';
+import FullScreenMenu from './FullScreenMenu';
+
 
 const Container = styled.div`
   &.dark {
-    height: 160px;
+    height: 140px;
     background-color: rgb(29, 96, 157);
   }
-
-  ul {
+  
+  #menu {
     position: absolute;
-    top: 65px;
+    left: 50px;
+    top: 50px;
+    color: white;
+    font-size: 2rem;
+    
+    cursor: pointer;
+    
+    @media (min-width: 1000px) {
+      display: none;
+    }
+  }
+
+  .hori-nav {
+    position: absolute;
+    top: 50px;
     right: 250px;
 
     list-style: none;
@@ -26,28 +37,12 @@ const Container = styled.div`
     margin: 0 0 0 30px;
     text-align: right;
 
+
+    @media (max-width: 1000px) {
+      display: none;
+    }
+    
     li {
-      position: relative;
-      padding: 10px 0;
-      text-align: left;
-      display: inline-block;
-      width: 150px;
-      font-family: Montserrat, sans-serif;
-
-      a {
-        color: white;
-        text-decoration: none;
-        display: block;
-
-        &.active {
-          color: #ffd166;
-        }
-
-        &.highlight {
-          font-weight: bold;
-        }
-      }
-
       &::before {
         position: absolute;
         bottom: 0;
@@ -67,11 +62,35 @@ const Container = styled.div`
       }
     }
   }
+
+
+  li {
+    position: relative;
+    padding: 10px 0;
+    text-align: left;
+    display: inline-block;
+    width: 150px;
+    font-family: Montserrat, sans-serif;
+
+    a {
+      color: white;
+      text-decoration: none;
+      display: block;
+
+      &.active {
+        color: #ffd166;
+      }
+
+      &.highlight {
+        font-weight: bold;
+      }
+    }
+  }
 `;
 
 const Logo = styled.img`
   position: absolute;
-  top: 50px;
+  top: 40px;
 
   // TODO: Make this dynamic
   right: 75px;
@@ -81,13 +100,16 @@ const Logo = styled.img`
 `;
 
 function NavBar({ hasBg }: { hasBg?: boolean }) {
+
+  const [isMenuOpen, setMenuOpen] = useState(false);
+
   const location = useLocation();
 
   const listItems: NavItem[] = [
-    // {
-    //   displayName: 'Projects',
-    //   link: '/projects',
-    // },
+    {
+      displayName: 'Home',
+      link: '/',
+    },
     {
       displayName: 'Team',
       link: '/about',
@@ -112,27 +134,45 @@ function NavBar({ hasBg }: { hasBg?: boolean }) {
     };
   });
 
+  const getListItems = () => {
+    return listItems.map((item) => (
+      <li>
+        <a
+          href={item.link}
+          className={
+            (item.isActive ? 'active' : '') +
+            (item.highlight ? ' highlight' : '')
+          }
+        >
+          {item.displayName}
+        </a>
+      </li>
+    ))
+  }
+
+  const handleStateChange = () => {
+    setMenuOpen(!isMenuOpen);
+  }
+
   return (
     <Container className={hasBg ? 'dark' : ''}>
-      <ul>
-        {listItems.map((item) => (
-          <li>
-            <a
-              href={item.link}
-              className={
-                (item.isActive ? 'active' : '') +
-                (item.highlight ? ' highlight' : '')
-              }
-            >
-              {item.displayName}
-            </a>
-          </li>
-        ))}
+
+      <span id='menu' onClick={handleStateChange}>
+        <i className="fa-solid fa-bars"></i>
+      </span>
+
+      <ul className={'hori-nav'}>
+        {getListItems()}
       </ul>
 
       <a href={'/'}>
         <Logo src={logo} alt={'Logo'} />
       </a>
+
+
+      <FullScreenMenu isOpen={isMenuOpen} toggle={handleStateChange}>
+        {getListItems()}
+      </FullScreenMenu>
     </Container>
   );
 }

@@ -19,6 +19,34 @@ const WhereScreen = styled(Screen)`
   background-color: #FFD166;
 `
 
+const PhotoGrid = styled.div`
+  
+  height: 100%;
+  max-width: 100vw;
+  background-color: #FFD166;
+
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-template-columns: repeat(8, auto);
+  
+  @media (max-width: 1200px) {
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(5, auto);
+  }
+  
+  
+  @media (max-width: 800px) {
+    grid-template-rows: repeat(5, auto);
+    grid-template-columns: repeat(3, auto);
+  }
+  
+  img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  
+`
 
 const TeamScreen = styled(Screen)`
   background-image: url(${initiativesBackground});
@@ -30,6 +58,9 @@ const TeamScreen = styled(Screen)`
     z-index: 1;
   }
 `;
+
+const TeamPhotoScreen = styled.div`
+`
 
 const ExecList = styled.ul`
   columns: 3;
@@ -46,6 +77,7 @@ const ExecList = styled.ul`
   }
   
   li {
+    font-size: 0.9rem;
     font-weight: bold;
     
     &:nth-child(2n) {
@@ -74,6 +106,26 @@ const TeamScreenGradient = styled.div`
   min-width: 1000px;
 `;
 
+
+const execNames = [
+  'joel_hutchinson.jpg',
+  'daniel_torrey.jpg',
+  'raymond_feng.jpg',
+  'dhwani_thakar.jpg',
+  'ellen_zhang.jpg',
+  'eve_zhang.jpg',
+  'james_you.jpg',
+  'alex_zhuang.jpg',
+  'jason_ko.jpg',
+  'lance_delos_reyes.png',
+  'lucy_zhu.jpg',
+  'brendan_zhou.jpg',
+
+  'tony_cui.png',
+  'youxiang_lei.jpg',
+  'josh_feng.jpg'
+]
+
 function AboutPage() {
   return (
     <>
@@ -88,7 +140,7 @@ function AboutPage() {
             <AboutDescription>
               Web Development & Consulting Club Incorporated started as student club at the University of Auckland in 2019. Since then, we have expanded to a membership base of 450+ members, serving students across Auckland in AUT as well as even high school students.
 
-              We are also a registered charitable incorporated society and you can view our recent filings here <a href={'https://register.charities.govt.nz/CharitiesRegister/ViewCharity?accountId=71489b06-782a-ec11-8d9e-00155d5731b1&searchId=15e90c8d-4e61-4822-b014-2ef1f816c027'}>on the charities register</a>.
+              We are also a registered charitable incorporated society and you can view our recent filings here <a href="https://register.charities.govt.nz/CharitiesRegister/ViewCharity?accountId=71489b06-782a-ec11-8d9e-00155d5731b1&searchId=15e90c8d-4e61-4822-b014-2ef1f816c027">on the charities register</a>.
             </AboutDescription>
           </div>
         </div>
@@ -139,7 +191,20 @@ function AboutPage() {
           <li>General Executive</li>
           <li>Eve Zhang</li>
         </ExecList>
+
+        <p>Wanting to join our team? Get in touch with us at <a href={'mailto:secretary@wdcc.co.nz'}>secretary@wdcc.co.nz</a></p>
       </WhereScreen>
+
+      <TeamPhotoScreen>
+
+        <PhotoGrid>
+          {execNames.map((it) => {
+            return (
+              <img src={`/resources/wdcc_photos/${it}`} alt={it} />
+            )
+          })}
+        </PhotoGrid>
+      </TeamPhotoScreen>
 
       <Footer />
     </>
