@@ -16,6 +16,7 @@ const AboutDescription = styled.p`
 
 const WhereScreen = styled(Screen)`
   min-height: auto;
+  background-color: #FFD166;
 `
 
 
@@ -60,7 +61,6 @@ const ExecList = styled.ul`
 
 
 const TeamScreenGradient = styled.div`
-  //background: linear-gradient(135deg, #FFD166, rgba(255, 209, 102, 0.59), rgb(0, 0, 0, 0));
   background: linear-gradient(135deg, #ffffff, rgba(255, 255, 255, 0.59), rgb(0, 0, 0, 0));
 
   position: absolute;
@@ -78,63 +78,69 @@ function AboutPage() {
   return (
     <>
       <NavBar hasBg={true} />
-      <WhereScreen>
-        <h1>Where we're at</h1>
-        <div>
-          <AboutDescription>
-            Web Development & Consulting Club Incorporated started as student club at the University of Auckland in 2019. Since then, we have expanded to a membership base of 450+ members, serving students across Auckland in AUT as well as even high school students.
-
-            We are also a registered charitable incorporated society and you can view our recent filings here <a href={'https://register.charities.govt.nz/CharitiesRegister/ViewCharity?accountId=71489b06-782a-ec11-8d9e-00155d5731b1&searchId=15e90c8d-4e61-4822-b014-2ef1f816c027'}>on the charities register</a>.
-          </AboutDescription>
-        </div>
-      </WhereScreen>
 
       <TeamScreen>
-        <h1>Your team for 2022</h1>
         <div>
           <TeamScreenGradient />
-            <ExecList>
-              <li>President</li>
-              <li>Raymond Feng</li>
 
-              <li>Vice President</li>
-              <li>Joel Hutchinson </li>
+          <h1>Who we are</h1>
+          <div>
+            <AboutDescription>
+              Web Development & Consulting Club Incorporated started as student club at the University of Auckland in 2019. Since then, we have expanded to a membership base of 450+ members, serving students across Auckland in AUT as well as even high school students.
 
-              <li>Secretary</li>
-              <li>Brendan Zhou</li>
-
-              <li>Treasurer</li>
-              <li>Daniel Torrey</li>
-
-              <li>Operations Director</li>
-              <li>Ellen Zhang</li>
-
-              <li>Marketing Director</li>
-              <li>Dhwani Thakar</li>
-
-              <li>Sponsorships & Outreach Director</li>
-              <li>Alex Zhuang</li>
-
-              <li>Consulting Director</li>
-              <li>Youxiang Lei</li>
-
-              <li>Projects Director</li>
-              <li>James You</li>
-              <li>Associate Projects Director</li>
-              <li>Jason Ko</li>
-              <li>Marketing Executive</li>
-              <li>Tony Cui</li>
-              <li>Marketing Executive</li>
-              <li>Lucy Zhu</li>
-              <li>General Executive</li>
-              <li>Lance Delos Reyes</li>
-              <li>General Executive</li>
-              <li>Josh Feng</li>
-              <li>General Executive</li>
-              <li>Eve Zhang</li>
-            </ExecList>
+              We are also a registered charitable incorporated society and you can view our recent filings here <a href={'https://register.charities.govt.nz/CharitiesRegister/ViewCharity?accountId=71489b06-782a-ec11-8d9e-00155d5731b1&searchId=15e90c8d-4e61-4822-b014-2ef1f816c027'}>on the charities register</a>.
+            </AboutDescription>
+          </div>
         </div>
       </TeamScreen>
+
+
+      <WhereScreen>
+        <h1>Your team for 2022</h1>
+
+        <ExecList>
+          <li>President</li>
+          <li>Raymond Feng</li>
+
+          <li>Vice President</li>
+          <li>Joel Hutchinson </li>
+
+          <li>Treasurer</li>
+          <li>Daniel Torrey</li>
+
+          <li>Secretary</li>
+          <li>Brendan Zhou</li>
+
+
+          <li>Operations Director</li>
+          <li>Ellen Zhang</li>
+
+          <li>Marketing Director</li>
+          <li>Dhwani Thakar</li>
+
+          <li>Sponsorships & Outreach Director</li>
+          <li>Alex Zhuang</li>
+
+          <li>Consulting Director</li>
+          <li>Youxiang Lei</li>
+
+          <li>Projects Director</li>
+          <li>James You</li>
+          <li>Associate Projects Director</li>
+          <li>Jason Ko</li>
+          <li>Marketing Executive</li>
+          <li>Tony Cui</li>
+          <li>Marketing Executive</li>
+          <li>Lucy Zhu</li>
+          <li>General Executive</li>
+          <li>Lance Delos Reyes</li>
+          <li>General Executive</li>
+          <li>Josh Feng</li>
+          <li>General Executive</li>
+          <li>Eve Zhang</li>
+        </ExecList>
+      </WhereScreen>
+
       <Footer />
     </>
   );

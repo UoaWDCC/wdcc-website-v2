@@ -9,6 +9,8 @@ const Container = styled.div`
   h2 {
     margin-bottom: 2%;
   }
+  max-width: 1200px;
+  margin: 50px auto;
 `;
 
 const data = {

@@ -15,20 +15,8 @@ import workshopIcon from '../resources/wdcc_icon_workshop.png';
 
 import computerIcon from '../resources/computer_icon.png';
 
+import sponsors from '../resources/wdcc_sponsors.png';
 
-interface Sponsors {
-  gold: string[],
-  silver: string[],
-  bronze: string[],
-  community?: string[],
-}
-
-const sponsorsFolderPath = '/resources/sponsors';
-const sponsors: Sponsors = {
-  gold: ['gold_rea.png', 'gold_transformative.png'],
-  silver: ['silver_aws.jpeg', 'silver_ecoportal.png', 'silver_ey.png'],
-  bronze: ['bronze_futurelabdigital.png', 'bronze_raygun.png', 'bronze_serato.png', 'bronze_skillsme.jpeg', 'bronze_spark64.png', 'bronze_squashed.jpeg'],
-};
 
 const Splash = styled(Screen)`
   --light-blue: rgb(49, 126, 187);
@@ -114,39 +102,41 @@ const InitiativeContainer = styled.div`
   justify-content: center;
 `
 
+const SponsorGrid = styled.div`
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  
+  align-items: center;
+  
+  max-width: 1200px;
+  
+  img {
+    width: 100%;
+    position: relative;
+    z-index: -1;
+  }
+  
+  @media (max-width: 700px) {
+    h1 {
+      padding: 0 20px;
+      margin: 0;
+      font-size: 1.5rem;
+    }
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    text-align: center;
+  }
+`
+
 
 const SponsorsScreen = styled(Screen)`
   min-height: 0;
-  text-align: center;
-
-  ul {
-
-    li {
-      display: inline-block;
-      vertical-align: middle;
-    }
-
-    &.gold img {
-      width: 300px;
-      max-height: 150px;
-      padding: 0 30px;
-    }
-
-    &.silver img {
-      width: 180px;
-      max-height: 100px;
-      padding: 0 20px;
-    }
-
-    &.bronze img {
-      width: 100px;
-      max-height: 50px;
-      padding: 0 10px;
-    }
-
-    img {
-      object-fit: contain;
-    }
+  
+  color: #183249;
+  
+  @media (max-width: 700px) {
+    padding: 40px 0;
   }
 `;
 
@@ -166,7 +156,7 @@ const JoinScreen = styled(Screen)`
     height: 100%;
   }
 
-  margin-bottom: 20px;
+  //margin-bottom: 100px;
 `;
 
 const JoinButton = styled(OutlinedButton)`
@@ -233,19 +223,11 @@ export default function IndexPage() {
       <NavBar />
 
       <SponsorsScreen>
-        <h1>Supported by our Sponsors</h1>
+        <SponsorGrid>
+          <h1>Supported by our 2022 Sponsors</h1>
+          <img src={sponsors} alt={'WDCC Sponsors 2022'} />
+        </SponsorGrid>
 
-        <ul className={'gold'}>
-          {sponsors.gold.map((logo) => <li><img src={`${sponsorsFolderPath}/${logo}`} alt={logo} /></li>)}
-        </ul>
-
-        <ul className={'silver'}>
-          {sponsors.silver.map((logo) => <li><img src={`${sponsorsFolderPath}/${logo}`} alt={logo} /></li>)}
-        </ul>
-
-        <ul className={'bronze'}>
-          {sponsors.bronze.map((logo) => <li><img src={`${sponsorsFolderPath}/${logo}`} alt={logo} /></li>)}
-        </ul>
       </SponsorsScreen>
 
       <JoinScreen>

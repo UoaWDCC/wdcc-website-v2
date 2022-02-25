@@ -84,16 +84,12 @@ function NavBar({ hasBg }: { hasBg?: boolean }) {
   const location = useLocation();
 
   const listItems: NavItem[] = [
-    {
-      displayName: 'Home',
-      link: '/',
-    },
     // {
     //   displayName: 'Projects',
     //   link: '/projects',
     // },
     {
-      displayName: 'About Us',
+      displayName: 'Team',
       link: '/about',
     },
     {
