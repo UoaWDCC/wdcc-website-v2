@@ -1,7 +1,6 @@
 import React from 'react';
 import Faq from 'react-faq-component';
 import styled from 'styled-components';
-import 'react-faq/dist/index.css';
 import NavBar from '../components/NavBar';
 import Screen from '../components/Screen';
 import Footer from '../components/Footer';
@@ -50,9 +49,10 @@ const data = {
 
 const styles = {
   bgColor: 'white',
-  titleTextColor: '#087DF1',
-  rowTitleColor: '#087DF1',
+  titleTextColor: 'rgb(29, 96, 157)',
+  rowTitleColor: '#444',
   rowContentColor: 'grey',
+  rowContentPaddingBottom: '50px'
   // arrowColor: 'red',
 };
 
