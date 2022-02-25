@@ -14,6 +14,7 @@ const BannerBottom = styled.div`
   p {
     color: rgba(255, 255, 255, 0.72);
     margin: 0;
+    font-size: 0.9rem;
     text-align: center;
   }
 `
@@ -83,7 +84,7 @@ function Footer() {
         <div className={'discord-container'}>
 
           <h4>Join the UoA Tech Clubs community!</h4>
-          <a href={'https://discord.gg/p6HkTZ4x'} target={'_blank'}><img src={discordJoinBtn}
+          <a href={'https://discord.gg/p6HkTZ4x'} target={'_blank'} rel='noreferrer'><img src={discordJoinBtn}
                                                                          alt={'Join on discord button'} /></a>
         </div>
 
