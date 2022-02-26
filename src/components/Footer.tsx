@@ -17,7 +17,7 @@ const BannerBottom = styled.div`
     font-size: 0.9rem;
     text-align: center;
   }
-`
+`;
 
 const Container = styled(Screen)`
   min-height: 0;
@@ -84,8 +84,8 @@ function Footer() {
         <div className={'discord-container'}>
 
           <h4>Join the UoA Tech Clubs community!</h4>
-          <a href={'https://discord.gg/p6HkTZ4x'} target={'_blank'} rel='noreferrer'><img src={discordJoinBtn}
-                                                                         alt={'Join on discord button'} /></a>
+          <a href={'https://discord.gg/9AC6xeXXzu'} target={'_blank'} rel='noreferrer'><img src={discordJoinBtn}
+                                                                                            alt={'Join on discord button'} /></a>
         </div>
 
         <ul>
@@ -99,9 +99,7 @@ function Footer() {
           </li>
           <li><a href={'https://github.com/UoaWDCC'} target={'_blank'} rel='noreferrer'><i
             className='fab fa-github-square' /></a></li>
-        </ul>
-
-
+        </ul
 
       </Container>
 
