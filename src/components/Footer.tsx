@@ -99,7 +99,7 @@ function Footer() {
           </li>
           <li><a href={'https://github.com/UoaWDCC'} target={'_blank'} rel='noreferrer'><i
             className='fab fa-github-square' /></a></li>
-        </ul
+        </ul>
 
       </Container>
 
