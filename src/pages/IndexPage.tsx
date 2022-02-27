@@ -30,6 +30,9 @@ const Splash = styled(Screen)`
 
   display: flex;
   align-items: center;
+  
+  
+  min-height: ${window.innerHeight}px;
 `;
 
 const SplashContent = styled.div`
@@ -77,12 +80,15 @@ const SplashContent = styled.div`
     }
   }
   
+  @media (max-width: 1000px) {
+    margin-left: 0;
+  }
+  
   @media (max-width: 800px) {
     margin-left: 20px;
-    margin-top: 100px;
 
     h1 {
-      font-size: 2.5rem;
+      font-size: 2.2rem;
     }
     
     h2 {
@@ -95,7 +101,7 @@ const SplashContent = styled.div`
     }
     
     img {
-      width: 150px;
+      width: 100px;
       top: 35%;
     }
   }

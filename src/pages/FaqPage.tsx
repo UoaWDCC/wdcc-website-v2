@@ -7,7 +7,7 @@ import Footer from '../components/Footer';
 
 const Container = styled.div`
   h2 {
-    margin-bottom: 2%;
+    margin-bottom: 20px;
   }
   max-width: 1200px;
   margin: 50px auto;

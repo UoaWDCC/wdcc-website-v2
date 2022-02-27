@@ -105,7 +105,7 @@ function Footer() {
 
       <BannerBottom className={'banner-bottom'}>
         <p>Powered by WDCC using React + TypeScript</p>
-        <p>Copyright &copy; {new Date().getFullYear()} Web Development & Consulting Club Incorporated. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} Web Development & Consulting Club Incorporated. All rights reserved.</p>
       </BannerBottom>
     </>
 

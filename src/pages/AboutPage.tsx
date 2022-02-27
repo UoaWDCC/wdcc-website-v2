@@ -5,22 +5,23 @@ import Footer from '../components/Footer';
 import styled from 'styled-components';
 import initiativesBackground from '../resources/about_grad.png';
 
-const AboutDescription = styled.p`
+const AboutDescription = styled.div`
   max-width: 100%;
   width: 550px;
-  
+
   line-height: 2rem;
-  z-index: 1;
+  z-index: 2;
+
   position: relative;
-`
+`;
 
 const WhereScreen = styled(Screen)`
   min-height: auto;
   background-color: #FFD166;
-`
+`;
 
 const PhotoGrid = styled.div`
-  
+
   height: 100%;
   max-width: 100vw;
   background-color: #FFD166;
@@ -28,68 +29,67 @@ const PhotoGrid = styled.div`
   display: grid;
   grid-template-rows: repeat(2, auto);
   grid-template-columns: repeat(8, auto);
-  
+
   @media (max-width: 1200px) {
     grid-template-rows: repeat(3, auto);
     grid-template-columns: repeat(5, auto);
   }
-  
-  
+
+
   @media (max-width: 800px) {
     grid-template-rows: repeat(5, auto);
     grid-template-columns: repeat(3, auto);
   }
-  
+
   img {
     object-fit: cover;
     width: 100%;
     height: 100%;
   }
-  
-`
+
+`;
 
 const TeamScreen = styled(Screen)`
   background-image: url(${initiativesBackground});
   background-size: cover;
   background-position: bottom right;
-  z-index: -2;
-  
+
   h1 {
     z-index: 1;
   }
 `;
 
 const TeamPhotoScreen = styled.div`
-`
+`;
 
 const ExecList = styled.ul`
   columns: 3;
   list-style: none;
   padding: 0;
   max-width: 1000px;
-  
+
   @media (max-width: 650px) {
     columns: 2
   }
-  
+
   @media (max-width: 400px) {
     columns: 1
   }
-  
+
   li {
     font-size: 0.9rem;
     font-weight: bold;
-    
+
     &:nth-child(2n) {
       margin-top: 2px;
-      
+
       font-weight: normal;
       margin-bottom: 20px;
       list-style: none;
       font-size: 1.2rem;
     }
   }
-`
+`;
 
 
 const TeamScreenGradient = styled.div`
@@ -101,7 +101,7 @@ const TeamScreenGradient = styled.div`
   left: 0;
   right: 0;
 
-  z-index: -1;
+  z-index: 1;
 
   min-width: 1000px;
 `;
@@ -123,8 +123,8 @@ const execNames = [
 
   'tony_cui.png',
   'youxiang_lei.jpg',
-  'josh_feng.jpg'
-]
+  'josh_feng.jpg',
+];
 
 function AboutPage() {
   return (
@@ -132,17 +132,18 @@ function AboutPage() {
       <NavBar hasBg={true} />
 
       <TeamScreen>
+        <TeamScreenGradient />
+
         <div>
-          <TeamScreenGradient />
 
-          <h1>Who we are</h1>
-          <div>
-            <AboutDescription>
-              Web Development & Consulting Club Incorporated started as student club at the University of Auckland in 2019. Since then, we have expanded to a membership base of 450+ members, serving students across Auckland in AUT as well as even high school students.
+          <AboutDescription>
+            <h1>Who we are</h1>
 
-              We are also a registered charitable incorporated society and you can view our recent filings here <a href="https://register.charities.govt.nz/CharitiesRegister/ViewCharity?accountId=71489b06-782a-ec11-8d9e-00155d5731b1&searchId=15e90c8d-4e61-4822-b014-2ef1f816c027">on the charities register</a>.
-            </AboutDescription>
-          </div>
+            Web Development & Consulting Club Incorporated started as student club at the University of Auckland in 2019. Since then, we have expanded to a membership base of 450+ members, serving students across Auckland from both UoA and AUT.
+
+              We are also an incorporated society with charities status, and you can view our recent annual filings here <a
+              href='https://register.charities.govt.nz/CharitiesRegister/ViewCharity?accountId=71489b06-782a-ec11-8d9e-00155d5731b1&searchId=b52c8156-ff6d-47db-9579-fa2522f83201'>on the charities register</a>.
+          </AboutDescription>
         </div>
       </TeamScreen>
 
@@ -155,7 +156,7 @@ function AboutPage() {
           <li>Raymond Feng</li>
 
           <li>Vice President</li>
-          <li>Joel Hutchinson </li>
+          <li>Joel Hutchinson</li>
 
           <li>Treasurer</li>
           <li>Daniel Torrey</li>
@@ -192,7 +193,8 @@ function AboutPage() {
           <li>Eve Zhang</li>
         </ExecList>
 
-        <p>Wanting to join our team? Get in touch with us at <a href={'mailto:secretary@wdcc.co.nz'}>secretary@wdcc.co.nz</a></p>
+        <p>Wanting to join our team? Get in touch with us at <a
+          href={'mailto:secretary@wdcc.co.nz'}>secretary@wdcc.co.nz</a></p>
       </WhereScreen>
 
       <TeamPhotoScreen>
@@ -201,7 +203,7 @@ function AboutPage() {
           {execNames.map((it) => {
             return (
               <img src={`/resources/wdcc_photos/${it}`} alt={it} />
-            )
+            );
           })}
         </PhotoGrid>
       </TeamPhotoScreen>
