@@ -17,7 +17,7 @@ const Container = styled.div`
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 2;
+  z-index: 10;
 
   #cross {
     position: fixed;

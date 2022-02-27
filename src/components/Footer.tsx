@@ -89,7 +89,7 @@ function Footer() {
         </div>
 
         <ul>
-          <li><a href={'https://www.linkedin.com/uoa-wdcc'} target={'_blank'} rel='noreferrer'><i
+          <li><a href={'https://nz.linkedin.com/company/uoa-wdcc'} target={'_blank'} rel='noreferrer'><i
             className='fab fa-linkedin' /></a></li>
           <li><a href={'https://www.facebook.com/uoa.wdcc'} target={'_blank'} rel='noreferrer'><i
             className='fab fa-facebook-square' /></a></li>

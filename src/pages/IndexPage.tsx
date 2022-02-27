@@ -4,6 +4,10 @@ import Screen from '../components/Screen';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
 
+// Ignoring this as this package is old and does not have typings
+// @ts-ignore
+import 'particles.js';
+
 import combinedBanner from '../resources/combined_banner.png';
 import initiativesBackground from '../resources/media/HACKATHON-126.jpg';
 import OutlinedButton from '../components/OutlinedButton';
@@ -62,6 +66,8 @@ const SplashContent = styled.div`
     right: 10%;
     top: 50%;
     transform: translate(0, -50%);
+    
+    z-index: 4;
     
     transition-duration: 0.2s;
     
@@ -216,10 +222,25 @@ const InitiativesButton = styled(OutlinedButton)`
   }
 `
 
+const ParticlesJS = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  
+  z-index: 3;
+`
+
 export default function IndexPage() {
+
+  // @ts-ignore
+  particlesJS.load('particles-js', 'resources/particlesjs-config.json');
+
   return (
     <>
       <Splash>
+        <ParticlesJS id={'particles-js'} />
         <SplashContent>
           <div>
             <h2>University of Auckland</h2>
@@ -283,7 +304,7 @@ export default function IndexPage() {
             we also hold workshops that help to upskill.
           </p>
 
-          <InitiativesButton href={'/about'}>Our Initiatives</InitiativesButton>
+          <InitiativesButton href={'/team'}>The team</InitiativesButton>
         </InitiativesScreenContent>
       </InitiativesScreen>
 

@@ -8,6 +8,7 @@ import FullScreenMenu from './FullScreenMenu';
 
 
 const Container = styled.div`
+  
   &.dark {
     height: 140px;
     background-color: rgb(29, 96, 157);
@@ -21,7 +22,8 @@ const Container = styled.div`
     font-size: 2rem;
     
     cursor: pointer;
-    
+    z-index: 10;
+
     @media (min-width: 1000px) {
       display: none;
     }
@@ -36,6 +38,8 @@ const Container = styled.div`
     padding: 0;
     margin: 0 0 0 30px;
     text-align: right;
+    
+    z-index: 10;
 
 
     @media (max-width: 1000px) {
@@ -94,9 +98,17 @@ const Logo = styled.img`
 
   // TODO: Make this dynamic
   right: 75px;
+  
+  @media (max-width: 600px) {
+    right: 50px;
+    width: 100px;
+    top: 50px;
+  }
 
   width: 150px;
   height: auto;
+  
+  z-index: 10;
 `;
 
 function NavBar({ hasBg }: { hasBg?: boolean }) {
@@ -112,7 +124,7 @@ function NavBar({ hasBg }: { hasBg?: boolean }) {
     },
     {
       displayName: 'Team',
-      link: '/about',
+      link: '/team',
     },
     {
       displayName: 'FAQ',

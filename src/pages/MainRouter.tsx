@@ -19,7 +19,7 @@ export default function MainRouter() {
     <BrowserRouter>
       <Switch>
         <Route exact path={'/'} component={IndexPage} />
-        <Route exact path={'/about'} component={AboutPage} />
+        <Route exact path={'/team'} component={AboutPage} />
         <Route exact path={'/sponsors'} component={SponsorsPage} />
         <Route exact path={'/faq'} component={FaqPage} />
         <Route exact path={'/expo'}>
