@@ -23,7 +23,7 @@ export default function MainRouter() {
         <Route exact path={'/sponsors'} component={SponsorsPage} />
         <Route exact path={'/faq'} component={FaqPage} />
         <Route exact path={'/expo'}>
-          <Redirect redirectUrl={'https://auckland.zoom.us/j/98145219755?pwd=c01iS0ZuMWFGc250OWJUa1BLeVkydz09'} />
+          <Redirect redirectUrl={'https://discord.gg/9AC6xeXXzu'} />
         </Route>
 
         {/* Default path if nothing matches */}
