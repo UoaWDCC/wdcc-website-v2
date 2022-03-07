@@ -22,8 +22,11 @@ export default function MainRouter() {
         <Route exact path={'/team'} component={AboutPage} />
         <Route exact path={'/sponsors'} component={SponsorsPage} />
         <Route exact path={'/faq'} component={FaqPage} />
-        <Route exact path={'/expo'}>
+        <Route exact path={'/discord'}>
           <Redirect redirectUrl={'https://discord.gg/9AC6xeXXzu'} />
+        </Route>
+        <Route exact path={'/pm-2022'}>
+          <Redirect redirectUrl={'https://forms.gle/jPacsiocofBTXsK67'} />
         </Route>
 
         {/* Default path if nothing matches */}
