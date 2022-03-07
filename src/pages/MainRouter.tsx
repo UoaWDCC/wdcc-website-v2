@@ -28,6 +28,9 @@ export default function MainRouter() {
         <Route exact path={'/pm-2022'}>
           <Redirect redirectUrl={'https://forms.gle/jPacsiocofBTXsK67'} />
         </Route>
+        <Route exact path={'/zoom-projects-launch-night'}>
+          <Redirect redirectUrl={'https://auckland.zoom.us/s/91055083153?pwd=RHVhN3YxekxzU2l1bER2UGwyTUs4Zz09'} />
+        </Route>
 
         {/* Default path if nothing matches */}
         <Route path={'/'} component={IndexPage} />
