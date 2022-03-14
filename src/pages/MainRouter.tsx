@@ -28,6 +28,9 @@ export default function MainRouter() {
         <Route exact path={'/pm-2022'}>
           <Redirect redirectUrl={'https://forms.gle/jPacsiocofBTXsK67'} />
         </Route>
+        <Route exact path={'/projects-app-2022'}>
+          <Redirect redirectUrl={'https://forms.gle/YEXVdj94eVzATtbd7'} />
+        </Route>
         <Route exact path={'/zoom-projects-launch-night'}>
           <Redirect redirectUrl={'https://zoom.us/j/92893578052'} />
         </Route>
