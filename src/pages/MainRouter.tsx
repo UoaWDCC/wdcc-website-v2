@@ -29,7 +29,7 @@ export default function MainRouter() {
           <Redirect redirectUrl={'https://forms.gle/jPacsiocofBTXsK67'} />
         </Route>
         <Route exact path={'/zoom-projects-launch-night'}>
-          <Redirect redirectUrl={'https://auckland.zoom.us/j/91055083153?pwd=RHVhN3YxekxzU2l1bER2UGwyTUs4Zz09'} />
+          <Redirect redirectUrl={'https://zoom.us/j/92893578052'} />
         </Route>
 
         {/* Default path if nothing matches */}
