@@ -32,7 +32,7 @@ const Container = styled.div`
   .hori-nav {
     position: absolute;
     top: 50px;
-    right: 250px;
+    right: 260px;
 
     list-style: none;
     padding: 0;
@@ -73,7 +73,8 @@ const Container = styled.div`
     padding: 10px 0;
     text-align: left;
     display: inline-block;
-    width: 150px;
+    // width: 150px;
+    margin-left: 100px;
     font-family: Montserrat, sans-serif;
 
     a {
@@ -119,6 +120,11 @@ function NavBar({ hasBg }: { hasBg?: boolean }) {
 
   const listItems: NavItem[] = [
     {
+      displayName: "Vista Comp",
+      link: '/vista-case-release',
+      highlight: true
+    },
+    {
       displayName: 'Home',
       link: '/',
     },
@@ -134,7 +140,7 @@ function NavBar({ hasBg }: { hasBg?: boolean }) {
       displayName: 'Join for 2022',
       link: 'https://join.wdcc.co.nz',
       highlight: true,
-    },
+    }
   ].map((listItem) => {
     const isActive =
       listItem.link === '/'
