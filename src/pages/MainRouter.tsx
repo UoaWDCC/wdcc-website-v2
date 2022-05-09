@@ -28,6 +28,9 @@ export default function MainRouter() {
         <Route exact path={'/vista-consulting-comp'}>
           <Redirect redirectUrl={'https://fb.me/e/1KsGCuIMD'} />
         </Route>
+        <Route exact path={'/vista-case-release'}>
+          <Redirect redirectUrl={'https://drive.google.com/drive/folders/1H5O9Jb4iAQN2-7XCOEDSgu1EGqj7RJlh?usp=sharing'} />
+        </Route>
 
         {/* Default path if nothing matches */}
         <Route path={'/'} component={IndexPage} />
