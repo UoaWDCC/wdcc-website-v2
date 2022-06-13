@@ -25,14 +25,8 @@ export default function MainRouter() {
         <Route exact path={'/discord'}>
           <Redirect redirectUrl={'https://discord.gg/9AC6xeXXzu'} />
         </Route>
-        <Route exact path={'/vista-consulting-comp'}>
-          <Redirect redirectUrl={'https://fb.me/e/1KsGCuIMD'} />
-        </Route>
-        <Route exact path={'/vista-workshop-recording'}>
-          <Redirect redirectUrl='https://vimeo.com/sppraxmedia/review/708541171/1206cd70d1' />
-        </Route>
-        <Route exact path={'/vista-case-release'}>
-          <Redirect redirectUrl={'https://drive.google.com/drive/folders/1H5O9Jb4iAQN2-7XCOEDSgu1EGqj7RJlh?usp=sharing'} />
+        <Route exact path={'/apply'}>
+          <Redirect redirectUrl={'https://forms.gle/oGREN8zHBpn8S51r9'} />
         </Route>
 
         {/* Default path if nothing matches */}

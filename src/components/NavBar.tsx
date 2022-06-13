@@ -120,11 +120,6 @@ function NavBar({ hasBg }: { hasBg?: boolean }) {
 
   const listItems: NavItem[] = [
     {
-      displayName: "Vista Comp",
-      link: '/vista-case-release',
-      highlight: true
-    },
-    {
       displayName: 'Home',
       link: '/',
     },
