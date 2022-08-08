@@ -31,6 +31,9 @@ export default function MainRouter() {
         <Route exact path={'/bagm-2022'}>
           <Redirect redirectUrl={'https://drive.google.com/drive/folders/1jDqER9V3ZfH8Ubq7mgI3P7CjkWK_wyS_?usp=sharing'} />
         </Route>
+        <Route exact path={'/express-workshop'}>
+          <Redirect redirectUrl={'https://forms.gle/BvfXLMDQb1fPMQNP8'} />
+        </Route>
 
         {/* Default path if nothing matches */}
         <Route path={'/'} component={IndexPage} />
