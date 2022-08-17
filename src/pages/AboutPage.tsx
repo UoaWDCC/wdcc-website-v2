@@ -3,7 +3,8 @@ import NavBar from '../components/NavBar';
 import Screen from '../components/Screen';
 import Footer from '../components/Footer';
 import styled from 'styled-components';
-import initiativesBackground from '../resources/about_grad.png';
+import initiativesBackground from '../resources/about_grad.jpg';
+import execList from '../resources/exec.json';
 
 const AboutDescription = styled.div`
   max-width: 100%;
@@ -26,25 +27,68 @@ const PhotoGrid = styled.div`
   max-width: 100vw;
   background-color: #FFD166;
 
-  display: grid;
-  grid-template-rows: repeat(2, auto);
-  grid-template-columns: repeat(8, auto);
+
+  --n-col: 10;
 
   @media (max-width: 1200px) {
-    grid-template-rows: repeat(3, auto);
-    grid-template-columns: repeat(5, auto);
+    --n-col: 5;
   }
 
 
   @media (max-width: 800px) {
-    grid-template-rows: repeat(5, auto);
-    grid-template-columns: repeat(3, auto);
+    --n-col: 3;
   }
+
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(var(--n-col), 1fr);
 
   img {
     object-fit: cover;
     width: 100%;
     height: 100%;
+
+    height: calc(100vw / var(--n-col));
+  }
+
+  .profile-ctn {
+    position: relative;
+    font-size: 0;
+
+    .desc-ctn {
+      text-align: center;
+      font-size: 1rem;
+      position: absolute;
+      inset: 0;
+      height: 100%;
+
+      opacity: 0;
+      transition-duration: 0.25s;
+
+      :hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 1;
+        cursor: default;
+        transition-duration: 0.25s;
+      }
+
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+
+      * {
+        padding: 0;
+        margin: 0 10px;
+        color: white;
+      }
+
+      .desc-role {
+        font-weight: bold;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        line-height: 0.9rem;
+      }
+    }
   }
 
 `;
@@ -93,7 +137,7 @@ const ExecList = styled.ul`
 
 
 const TeamScreenGradient = styled.div`
-  background: linear-gradient(135deg, #ffffff, rgba(255, 255, 255, 0.59), rgb(0, 0, 0, 0));
+  background: linear-gradient(135deg, #ffffff, rgba(255, 255, 255, 0.40), rgb(0, 0, 0, 0));
 
   position: absolute;
   top: 0;
@@ -105,26 +149,6 @@ const TeamScreenGradient = styled.div`
 
   min-width: 1000px;
 `;
-
-
-const execNames = [
-  'joel_hutchinson.jpg',
-  'daniel_torrey.jpg',
-  'raymond_feng.jpg',
-  'dhwani_thakar.jpg',
-  'ellen_zhang.jpg',
-  'eve_zhang.jpg',
-  'james_you.jpg',
-  'alex_zhuang.jpg',
-  'jason_ko.jpg',
-  'lance_delos_reyes.png',
-  'lucy_zhu.jpg',
-  'brendan_zhou.jpg',
-
-  'tony_cui.png',
-  'youxiang_lei.jpg',
-  'josh_feng.jpg',
-];
 
 function AboutPage() {
   return (
@@ -139,70 +163,41 @@ function AboutPage() {
           <AboutDescription>
             <h1>Who we are</h1>
 
-            Web Development & Consulting Club Incorporated started as student club at the University of Auckland in 2019. Since then, we have expanded to a membership base of 450+ members, serving students across Auckland from both UoA and AUT.
-
-              We are also an incorporated society with charities status, and you can view our recent annual filings here <a
-              href='https://register.charities.govt.nz/CharitiesRegister/ViewCharity?accountId=71489b06-782a-ec11-8d9e-00155d5731b1&searchId=b52c8156-ff6d-47db-9579-fa2522f83201'>on the charities register</a>.
+            Web Development & Consulting Club Incorporated started as student club at the University of Auckland in 2019. 
+            Since then, we have expanded to a membership base of 450+ members, serving students across Auckland from both UOA and AUT.
           </AboutDescription>
         </div>
       </TeamScreen>
 
 
       <WhereScreen>
-        <h1>Your team for 2022</h1>
+        <h1>Your executive team for 2022</h1>
 
         <ExecList>
-          <li>President</li>
-          <li>Raymond Feng</li>
-
-          <li>Vice President</li>
-          <li>Joel Hutchinson</li>
-
-          <li>Treasurer</li>
-          <li>Daniel Torrey</li>
-
-          <li>Secretary</li>
-          <li>Brendan Zhou</li>
-
-
-          <li>Operations Director</li>
-          <li>Ellen Zhang</li>
-
-          <li>Marketing Director</li>
-          <li>Dhwani Thakar</li>
-
-          <li>Sponsorships & Outreach Director</li>
-          <li>Alex Zhuang</li>
-
-          <li>Consulting Director</li>
-          <li>Youxiang Lei</li>
-
-          <li>Projects Director</li>
-          <li>James You</li>
-          <li>Associate Projects Director</li>
-          <li>Jason Ko</li>
-          <li>Marketing Executive</li>
-          <li>Tony Cui</li>
-          <li>Marketing Executive</li>
-          <li>Lucy Zhu</li>
-          <li>General Executive</li>
-          <li>Lance Delos Reyes</li>
-          <li>General Executive</li>
-          <li>Josh Feng</li>
-          <li>General Executive</li>
-          <li>Eve Zhang</li>
+          {execList.map((it, key) => (
+            <>
+            <li key={key}>{it.role}</li>
+            <li key={key + 100}>{it.name}</li>
+            </>
+          ))}
         </ExecList>
 
-        <p>Wanting to join our team? Get in touch with us at <a
+        <p>Want to join our team? Get in touch with us at <a
           href={'mailto:secretary@wdcc.co.nz'}>secretary@wdcc.co.nz</a></p>
       </WhereScreen>
 
       <TeamPhotoScreen>
 
         <PhotoGrid>
-          {execNames.map((it) => {
+          {execList.map((it, key) => {
             return (
-              <img src={`/resources/wdcc_photos/${it}`} alt={it} />
+              <div className='profile-ctn'>
+                <img key={key} src={`/resources/team_photos/${it.profileUri}`} alt={`${it.name} - ${it.role}`} />
+                <div className='desc-ctn'>
+                  <p className='desc-role'>{it.role}</p>
+                  <p className='desc-name'>{it.name}</p>
+                </div>
+              </div>
             );
           })}
         </PhotoGrid>
