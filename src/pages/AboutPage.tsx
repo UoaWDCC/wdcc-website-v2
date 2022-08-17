@@ -66,7 +66,7 @@ const PhotoGrid = styled.div`
       transition-duration: 0.25s;
 
       :hover {
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.7);
         opacity: 1;
         cursor: default;
         transition-duration: 0.25s;
