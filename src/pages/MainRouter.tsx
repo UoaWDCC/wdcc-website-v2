@@ -25,7 +25,7 @@ export default function MainRouter() {
         <Route exact path={'/discord'}>
           <Redirect redirectUrl={'https://discord.gg/9AC6xeXXzu'} />
         </Route>
-        <Route exact path={'/exec-2023'}>
+        <Route exact path={'/apply'}>
           <Redirect redirectUrl={'https://forms.gle/RJhM28ajwDKbNWbN6'} />
         </Route>
         {/* Default path if nothing matches */}
