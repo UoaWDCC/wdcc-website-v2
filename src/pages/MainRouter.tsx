@@ -25,16 +25,9 @@ export default function MainRouter() {
         <Route exact path={'/discord'}>
           <Redirect redirectUrl={'https://discord.gg/9AC6xeXXzu'} />
         </Route>
-        <Route exact path={'/apply'}>
-          <Redirect redirectUrl={'https://forms.gle/oGREN8zHBpn8S51r9'} />
+        <Route exact path={'/exec-2023'}>
+          <Redirect redirectUrl={'https://forms.gle/RJhM28ajwDKbNWbN6'} />
         </Route>
-        <Route exact path={'/bagm-2022'}>
-          <Redirect redirectUrl={'https://drive.google.com/drive/folders/1jDqER9V3ZfH8Ubq7mgI3P7CjkWK_wyS_?usp=sharing'} />
-        </Route>
-        <Route exact path={'/express-workshop'}>
-          <Redirect redirectUrl={'https://forms.gle/BvfXLMDQb1fPMQNP8'} />
-        </Route>
-
         {/* Default path if nothing matches */}
         <Route path={'/'} component={IndexPage} />
       </Switch>
