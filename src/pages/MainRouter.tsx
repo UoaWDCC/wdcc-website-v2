@@ -25,8 +25,8 @@ export default function MainRouter() {
         <Route exact path={'/discord'}>
           <Redirect redirectUrl={'https://discord.gg/9AC6xeXXzu'} />
         </Route>
-        <Route exact path={'/apply'}>
-          <Redirect redirectUrl={'https://forms.gle/RJhM28ajwDKbNWbN6'} />
+        <Route exact path={'/socials'}>
+          <Redirect redirectUrl={'https://go.wdcc.co.nz'} />
         </Route>
         {/* Default path if nothing matches */}
         <Route path={'/'} component={IndexPage} />
