@@ -6,21 +6,19 @@ import { useLocation } from 'react-router-dom';
 import NavItem from './NavItem';
 import FullScreenMenu from './FullScreenMenu';
 
-
 const Container = styled.div`
-  
   &.dark {
     height: 140px;
     background-color: rgb(29, 96, 157);
   }
-  
+
   #menu {
     position: absolute;
     left: 50px;
     top: 50px;
     color: white;
     font-size: 2rem;
-    
+
     cursor: pointer;
     z-index: 10;
 
@@ -38,14 +36,13 @@ const Container = styled.div`
     padding: 0;
     margin: 0 0 0 30px;
     text-align: right;
-    
-    z-index: 10;
 
+    z-index: 10;
 
     @media (max-width: 1000px) {
       display: none;
     }
-    
+
     li {
       &::before {
         position: absolute;
@@ -67,7 +64,6 @@ const Container = styled.div`
     }
   }
 
-
   li {
     position: relative;
     padding: 10px 0;
@@ -75,6 +71,7 @@ const Container = styled.div`
     display: inline-block;
     // width: 150px;
     margin-left: 100px;
+    margin-right: 50px;
     font-family: Montserrat, sans-serif;
 
     a {
@@ -99,7 +96,7 @@ const Logo = styled.img`
 
   // TODO: Make this dynamic
   right: 75px;
-  
+
   @media (max-width: 600px) {
     right: 50px;
     width: 100px;
@@ -108,12 +105,11 @@ const Logo = styled.img`
 
   width: 150px;
   height: auto;
-  
+
   z-index: 10;
 `;
 
 function NavBar({ hasBg }: { hasBg?: boolean }) {
-
   const [isMenuOpen, setMenuOpen] = useState(false);
 
   const location = useLocation();
@@ -132,10 +128,10 @@ function NavBar({ hasBg }: { hasBg?: boolean }) {
       link: '/faq',
     },
     {
-      displayName: 'Join for 2022',
+      displayName: 'Join for 2023',
       link: 'https://join.wdcc.co.nz',
       highlight: true,
-    }
+    },
   ].map((listItem) => {
     const isActive =
       listItem.link === '/'
@@ -160,28 +156,24 @@ function NavBar({ hasBg }: { hasBg?: boolean }) {
           {item.displayName}
         </a>
       </li>
-    ))
-  }
+    ));
+  };
 
   const handleStateChange = () => {
     setMenuOpen(!isMenuOpen);
-  }
+  };
 
   return (
     <Container className={hasBg ? 'dark' : ''}>
-
-      <span id='menu' onClick={handleStateChange}>
+      <span id="menu" onClick={handleStateChange}>
         <i className="fa-solid fa-bars"></i>
       </span>
 
-      <ul className={'hori-nav'}>
-        {getListItems()}
-      </ul>
+      <ul className={'hori-nav'}>{getListItems()}</ul>
 
       <a href={'/'}>
         <Logo src={logo} alt={'Logo'} />
       </a>
-
 
       <FullScreenMenu isOpen={isMenuOpen} toggle={handleStateChange}>
         {getListItems()}
