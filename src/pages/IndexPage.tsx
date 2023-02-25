@@ -19,7 +19,7 @@ import workshopIcon from '../resources/wdcc_icon_workshop.png';
 
 import computerIcon from '../resources/computer_icon.png';
 
-import sponsors from '../resources/wdcc_sponsors.png';
+import sponsors from '../resources/wdcc_sponsors_quick.png';
 
 const Splash = styled(Screen)`
   --light-blue: rgb(49, 126, 187);
@@ -271,7 +271,7 @@ export default function IndexPage() {
       <SponsorsScreen>
         <SponsorGrid>
           <h1>Supported by our 2023 Sponsors</h1>
-          <img src={sponsors} alt={'WDCC Sponsors 2022'} />
+          <img src={sponsors} alt={'WDCC Sponsors 2023'} />
         </SponsorGrid>
       </SponsorsScreen>
 
