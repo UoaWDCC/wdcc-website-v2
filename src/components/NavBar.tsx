@@ -128,6 +128,10 @@ function NavBar({ hasBg }: { hasBg?: boolean }) {
       link: '/faq',
     },
     {
+      displayName: 'Linktree',
+      link: 'https://go.wdcc.co.nz',
+    },
+    {
       displayName: 'Join for 2023',
       link: 'https://forms.gle/zuV2ZzdtmHH7976MA',
       highlight: true,

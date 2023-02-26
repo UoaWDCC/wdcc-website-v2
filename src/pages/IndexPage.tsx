@@ -287,7 +287,9 @@ export default function IndexPage() {
               You don't need to know web development. <b>Membership is free!</b>
             </p>
           </div>
-          <JoinButton href={'https://join.wdcc.co.nz'}>Join WDCC</JoinButton>
+          <JoinButton href={'https://forms.gle/zuV2ZzdtmHH7976MA'}>
+            Join WDCC
+          </JoinButton>
         </div>
 
         <img src={combinedBanner} alt={'Hackathon photos'} />
