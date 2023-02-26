@@ -1,57 +1,62 @@
 [
   {
-    "name": "Raymond Feng",
-    "profileUri": "raymond_feng.jpg",
+    "name": "Daniel Torrey",
+    "profileUri": "daniel_torrey.jpg",
     "role": "President"
   },
   {
-    "name": "Joel Hutchinson",
-    "profileUri": "joel_hutchinson.jpg",
+    "name": "Lucy Zhu",
+    "profileUri": "lucy_zhu.jpg",
     "role": "Vice President"
-  },
-  {
-    "name": "Daniel Torrey",
-    "profileUri": "daniel_torrey.jpg",
-    "role": "Treasurer"
-  },
-  {
-    "name": "Brendan Zhou",
-    "profileUri": "brendan_zhou.jpg",
-    "role": "Secretary"
-  },
-  {
-    "name": "Ellen Zhang",
-    "profileUri": "ellen_zhang.jpg",
-    "role": "Operations Director"
-  },
-  {
-    "name": "James You",
-    "profileUri": "james_you.jpg",
-    "role": "Projects Director"
   },
   {
     "name": "Alex Zhuang",
     "profileUri": "alex_zhuang.jpg",
-    "role": "Sponsorships & Outreach Director"
+    "role": "Treasurer"
   },
   {
-    "name": "Eve Zhang",
-    "profileUri": "eve_zhang.jpg",
-    "role": "Marketing Director"
-  },
-  {
-    "name": "Youxiang Lei",
-    "profileUri": "youxiang_lei.jpg",
-    "role": "Consulting Director"
+    "name": "Vishva Dave",
+    "profileUri": "vishva_dave.jpg",
+    "role": "Secretary"
   },
   {
     "name": "Tristan Mona",
     "profileUri": "tristan_mona.jpg",
+    "role": "Operations Director"
+  },
+  {
+    "name": "Raymond Feng",
+    "profileUri": "raymond_feng.jpg",
+    "role": "Projects Director"
+  },
+  {
+    "name": "Dhruvkanth Puli",
+    "profileUri": "dhruvkanth_puli.jpg",
+    "role": "Sponsorships & Outreach Director"
+  },
+  {
+    "name": "Brendan Zhou",
+    "profileUri": "brendan_zhou.jpg",
+    "role": "Marketing Director"
+  },
+  {
+    "name": "Ishaan Bhide",
+    "profileUri": "ishaan_bhide.jpg",
+    "role": "Consulting Director"
+  },
+  {
+    "name": "Michelle Lie",
+    "profileUri": "michelle_lie.jpg",
     "role": "Operations Executive"
   },
   {
-    "name": "Lance Delos Reyes",
-    "profileUri": "lance_delos_reyes.jpg",
+    "name": "Ellen Zhang",
+    "profileUri": "ellen_zhang.jpg",
+    "role": "Operations Executive"
+  },
+  {
+    "name": "Luke McCallum",
+    "profileUri": "luke_mccallum.jpg",
     "role": "Operations Executive"
   },
   {
@@ -65,8 +70,8 @@
     "role": "Operations Executive"
   },
   {
-    "name": "Ishaan Bhide",
-    "profileUri": "ishaan_bhide.jpg",
+    "name": "Youxiang Lei",
+    "profileUri": "youxiang_lei.jpg",
     "role": "Operations Executive"
   },
   {
@@ -75,8 +80,8 @@
     "role": "Marketing Executive"
   },
   {
-    "name": "Lucy Zhu",
-    "profileUri": "lucy_zhu.jpg",
+    "name": "Selin Akkaya ",
+    "profileUri": "selin_akkaya.jpg",
     "role": "Marketing Executive"
   },
   {
@@ -95,8 +100,18 @@
     "role": "Projects Executive"
   },
   {
-    "name": "Vishva Dave",
-    "profileUri": "vishva_dave.png",
+    "name": "Naren Rohan",
+    "profileUri": "naren_rohan.jpg",
+    "role": "Projects Executive"
+  },
+  {
+    "name": "Simran Chandradevan",
+    "profileUri": "simran_chandradevan.jpg",
+    "role": "Projects Executive"
+  },
+  {
+    "name": "Zoe Niu",
+    "profileUri": "zoe_niu.jpg",
     "role": "Projects Executive"
   }
 ]
