@@ -129,7 +129,7 @@ function NavBar({ hasBg }: { hasBg?: boolean }) {
     },
     {
       displayName: 'Join for 2023',
-      link: 'https://join.wdcc.co.nz',
+      link: 'https://forms.gle/zuV2ZzdtmHH7976MA',
       highlight: true,
     },
   ].map((listItem) => {

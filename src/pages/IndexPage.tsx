@@ -19,7 +19,7 @@ import workshopIcon from '../resources/wdcc_icon_workshop.png';
 
 import computerIcon from '../resources/computer_icon.png';
 
-import sponsors from '../resources/wdcc_sponsors_quick.png';
+import sponsors from '../resources/wdcc_sponsors_2023.png';
 
 const Splash = styled(Screen)`
   --light-blue: rgb(49, 126, 187);
