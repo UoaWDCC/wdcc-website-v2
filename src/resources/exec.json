@@ -10,14 +10,14 @@
     "role": "Co-President"
   },
   {
-    "name": "Alex Zhuang",
-    "profileUri": "alex_zhuang.jpg",
-    "role": "Treasurer"
-  },
-  {
     "name": "Vishva Dave",
     "profileUri": "vishva_dave.jpg",
     "role": "Secretary"
+  },
+  {
+    "name": "Alex Zhuang",
+    "profileUri": "alex_zhuang.jpg",
+    "role": "Treasurer"
   },
   {
     "name": "Tristan Mona",
