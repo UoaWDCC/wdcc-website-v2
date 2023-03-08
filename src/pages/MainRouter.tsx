@@ -28,6 +28,13 @@ export default function MainRouter() {
         <Route exact path={'/socials'}>
           <Redirect redirectUrl={'https://go.wdcc.co.nz'} />
         </Route>
+        <Route exact path={'/reimbursement'}>
+          <Redirect
+            redirectUrl={
+              'https://docs.google.com/forms/d/e/1FAIpQLSfJurJhaaHiO6S0O3KuyZ7DXvMoHnOGlwopeXLQHm6mDB9EKQ/viewform'
+            }
+          />
+        </Route>
         {/* Default path if nothing matches */}
         <Route path={'/'} component={IndexPage} />
       </Switch>
