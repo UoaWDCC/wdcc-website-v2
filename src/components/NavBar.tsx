@@ -133,7 +133,7 @@ function NavBar({ hasBg }: { hasBg?: boolean }) {
     },
     {
       displayName: `Join for ${new Date().getFullYear()}`,
-      link: 'https://forms.gle/zuV2ZzdtmHH7976MA',
+      link: 'https://forms.gle/YX8RAdXGF4rTN3e27',
       highlight: true,
     },
   ].map((listItem) => {

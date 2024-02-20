@@ -169,7 +169,7 @@ function AboutPage() {
       </TeamScreen>
 
       <WhereScreen>
-        <h1>Your executive team for 2023</h1>
+        <h1>Your executive team for 2024</h1>
 
         <ExecList>
           {execList.map((it, key) => (

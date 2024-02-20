@@ -289,7 +289,7 @@ export default function IndexPage() {
               You don't need to know web development. <b>Membership is free!</b>
             </p>
           </div>
-          <JoinButton href={'https://forms.gle/zuV2ZzdtmHH7976MA'}>
+          <JoinButton href={'https://forms.gle/YX8RAdXGF4rTN3e27'}>
             Join WDCC
           </JoinButton>
         </div>
