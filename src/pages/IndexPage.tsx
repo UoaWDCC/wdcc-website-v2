@@ -21,6 +21,8 @@ import computerIcon from '../resources/computer_icon.png';
 
 import sponsors from '../resources/wdcc_sponsors_2023.png';
 
+const CURRENT_YEAR = new Date().getFullYear();
+
 const Splash = styled(Screen)`
   --light-blue: rgb(49, 126, 187);
   --dark-blue: rgb(29, 96, 157);
@@ -270,14 +272,14 @@ export default function IndexPage() {
 
       <SponsorsScreen>
         <SponsorGrid>
-          <h1>Supported by our 2023 Sponsors</h1>
-          <img src={sponsors} alt={'WDCC Sponsors 2023'} />
+          <h1>Supported by our {CURRENT_YEAR} Sponsors</h1>
+          <img src={sponsors} alt={`WDCC Sponsors ${CURRENT_YEAR}`} />
         </SponsorGrid>
       </SponsorsScreen>
 
       <JoinScreen>
         <div>
-          <h1>Become a member for 2023</h1>
+          <h1>Become a member for {CURRENT_YEAR}</h1>
           <div>
             <p>
               Get up-to-date reminders of WDCC events and workshops, and some

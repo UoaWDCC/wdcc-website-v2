@@ -1,92 +1,67 @@
 [
   {
-    "name": "Daniel Torrey",
-    "profileUri": "daniel_torrey.jpg",
-    "role": "Co-President"
-  },
-  {
-    "name": "Lucy Zhu",
-    "profileUri": "lucy_zhu.jpg",
-    "role": "Co-President"
-  },
-  {
     "name": "Vishva Dave",
     "profileUri": "vishva_dave.jpg",
-    "role": "Secretary"
-  },
-  {
-    "name": "Alex Zhuang",
-    "profileUri": "alex_zhuang.jpg",
-    "role": "Treasurer"
+    "role": "Co-President"
   },
   {
     "name": "Tristan Mona",
     "profileUri": "tristan_mona.jpg",
-    "role": "Operations Director"
-  },
-  {
-    "name": "Raymond Feng",
-    "profileUri": "raymond_feng.jpg",
-    "role": "Projects Director"
+    "role": "Co-President"
   },
   {
     "name": "Dhruvkanth Puli",
     "profileUri": "dhruvkanth_puli.jpg",
-    "role": "Sponsorships & Outreach Director"
-  },
-  {
-    "name": "Brendan Zhou",
-    "profileUri": "brendan_zhou.jpg",
-    "role": "Marketing Director"
-  },
-  {
-    "name": "Ishaan Bhide",
-    "profileUri": "ishaan_bhide.jpg",
-    "role": "Consulting Director"
-  },
-  {
-    "name": "Michelle Lie",
-    "profileUri": "michelle_lie.jpg",
-    "role": "Operations Executive"
-  },
-  {
-    "name": "Ellen Zhang",
-    "profileUri": "ellen_zhang.jpg",
-    "role": "Operations Executive"
-  },
-  {
-    "name": "Luke McCallum",
-    "profileUri": "luke_mccallum.jpg",
-    "role": "Operations Executive"
-  },
-  {
-    "name": "Josh Feng",
-    "profileUri": "josh_feng.jpg",
-    "role": "Operations Executive"
+    "role": "Secretary-Treasurer"
   },
   {
     "name": "Emily Zou",
     "profileUri": "emily_zou.jpg",
-    "role": "Operations Executive"
+    "role": "Education Director"
   },
   {
-    "name": "Youxiang Lei",
-    "profileUri": "youxiang_lei.jpg",
-    "role": "Operations Executive"
+    "name": "Naren Rohan",
+    "profileUri": "naren_rohan.jpg",
+    "role": "Projects Director"
   },
   {
-    "name": "Tony Cui",
-    "profileUri": "tony_cui.jpg",
-    "role": "Marketing Executive"
+    "name": "Lucy Zhu",
+    "profileUri": "lucy_zhu.jpg",
+    "role": "Outreach Director"
   },
   {
-    "name": "Selin Akkaya ",
+    "name": "Alex McLeod",
+    "profileUri": "alex_mcleod.jpg",
+    "role": "Tech Director"
+  },
+  {
+    "name": "Selin Akkaya",
     "profileUri": "selin_akkaya.jpg",
+    "role": "Marketing Director"
+  },
+  {
+    "name": "Luke McCallum",
+    "profileUri": "luke_mccallum.jpg",
+    "role": "Competitions Director"
+  },
+  {
+    "name": "Michelle Lie",
+    "profileUri": "michelle_lie.jpg",
+    "role": "Social Director"
+  },
+  {
+    "name": "Deiza Talreja",
+    "profileUri": "deiza_talreja.jpg",
     "role": "Marketing Executive"
   },
   {
-    "name": "Tim Li",
-    "profileUri": "tim_li.jpg",
+    "name": "Kathleen Shi",
+    "profileUri": "kathleen_shi.jpg",
+    "role": "Marketing Executive"
+  },
+  {
+    "name": "Lina Yuan",
+    "profileUri": "lina_yuan.jpg",
     "role": "Marketing Executive"
   },
   {
@@ -95,13 +70,53 @@
     "role": "Marketing Executive"
   },
   {
-    "name": "Matthew Ouyang",
-    "profileUri": "matthew_ouyang.jpg",
+    "name": "Ariel Wang",
+    "profileUri": "ariel_wang.jpg",
+    "role": "Education Executive"
+  },
+  {
+    "name": "Raymond Yang",
+    "profileUri": "raymond_yang.jpg",
+    "role": "Education Executive"
+  },
+  {
+    "name": "Sam Cordner",
+    "profileUri": "sam_cordner.jpg",
+    "role": "Education Executive"
+  },
+  {
+    "name": "Wesley Key",
+    "profileUri": "wesley_key.jpg",
+    "role": "Education Executive"
+  },
+  {
+    "name": "Alex Zhuang",
+    "profileUri": "alex_zhuang.jpg",
+    "role": "Competitions Executive"
+  },
+  {
+    "name": "Youxiang Lei",
+    "profileUri": "youxiang_lei.jpg",
+    "role": "Competitions Executive"
+  },
+  {
+    "name": "Dylan Heron",
+    "profileUri": "dylan_heron.jpg",
+    "role": "Social Executive"
+  },
+  {
+    "name": "Kimberley Zhu",
+    "profileUri": "kimberley_zhu.jpg",
+    "role": "Social Executive"
+  },
+  {
+    "name": "Christopher Valenzuela",
+    "profileUri": "chris_valenzuela.jpg",
     "role": "Projects Executive"
   },
   {
-    "name": "Naren Rohan",
-    "profileUri": "naren_rohan.jpg",
+    "name": "Nate Williamson",
+    "profileUri": "nate_williamson.jpg",
     "role": "Projects Executive"
   },
   {

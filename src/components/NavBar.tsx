@@ -132,7 +132,7 @@ function NavBar({ hasBg }: { hasBg?: boolean }) {
       link: 'https://go.wdcc.co.nz',
     },
     {
-      displayName: 'Join for 2023',
+      displayName: `Join for ${new Date().getFullYear()}`,
       link: 'https://forms.gle/zuV2ZzdtmHH7976MA',
       highlight: true,
     },
