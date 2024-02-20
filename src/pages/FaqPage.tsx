@@ -19,7 +19,7 @@ const data = {
     {
       title: 'What do we do?',
       content: `We are a student led club that caters to all UoA students! We have a core focus on web development as well as 
-        some areas of tech consulting. Click the join button in the top nav to stay up to date with our events and initiatives for 2022.`,
+        some areas of tech consulting. Click the join button in the top nav to stay up to date with our events and initiatives for 2024.`,
     },
     {
       title: 'What can you do within this club?',
@@ -53,7 +53,7 @@ const styles = {
   titleTextColor: 'rgb(29, 96, 157)',
   rowTitleColor: '#444',
   rowContentColor: 'grey',
-  rowContentPaddingBottom: '50px'
+  rowContentPaddingBottom: '50px',
   // arrowColor: 'red',
 };
 
