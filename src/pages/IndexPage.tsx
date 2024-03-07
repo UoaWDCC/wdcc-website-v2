@@ -19,7 +19,7 @@ import workshopIcon from '../resources/wdcc_icon_workshop.png';
 
 import computerIcon from '../resources/computer_icon.png';
 
-import sponsors from '../resources/wdcc_sponsors_2023.png';
+import sponsors from '../resources/wdcc_sponsors_2024.png';
 
 const CURRENT_YEAR = new Date().getFullYear();
 
